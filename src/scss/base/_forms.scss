@@ -1,0 +1,89 @@
+// -------------------------------------------------------------------
+// Forms
+// -------------------------------------------------------------------
+
+$form-border-color: $bb-color;
+$form-border-color-hover: darken($bb-color, 10);
+$form-border-color-focus: $primary;
+$form-box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+
+// -------------------------------------------------------------------
+
+fieldset {
+  @include module;
+  margin: 0 0 $base_line_height;
+  padding: $base_line_height / 1.5;
+  background: $light-smoke;
+  border: 1px solid darken($light-smoke, 10);
+}
+
+input,
+label,
+select {
+  display: block;
+}
+
+label {
+  font-weight: bold;
+  font-size: em(14);
+  line-height: 1.4;
+  margin-bottom: $unit / 2;
+
+  &.required:after {
+    content: "*";
+  }
+
+  abbr {
+    display: none;
+  }
+}
+
+textarea,
+#{$all-text-inputs} {
+  @include box-sizing(border-box);
+  @include transition(border-color);
+  margin: 0 0 $base_line_height;
+  background-color: white;
+  border: 1px solid $form-border-color;
+  box-shadow: $form-box-shadow;
+  padding: ($unit / 2) ($unit / 2);
+  width: 100%;
+
+  &:hover {
+    border-color: $form-border-color-hover;
+  }
+
+  &:focus {
+    border-color: $form-border-color-focus;
+    box-shadow: $form-box-shadow-focus;
+    outline: none;
+  }
+}
+
+input[type="search"] {
+  @include appearance(none);
+}
+
+input[type="checkbox"], input[type="radio"] {
+  display: inline;
+  margin-right: $unit / 4;
+}
+
+select {
+  width: auto;
+  margin-bottom: $unit;
+}
+
+// button,
+button.button,
+input[type="submit"],
+input[type="reset"] {
+  @include appearance(none);
+  @include button;
+  font-weight: 400;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}

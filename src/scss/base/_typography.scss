@@ -1,0 +1,89 @@
+// -------------------------------------------------------------------
+// Typography
+// -------------------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  @include proxima_nova_regular;
+  font-size: em(24);
+  line-height: 1.25;
+  margin: em(32, 24) 0 em(24,24);
+  color: $header-font-color;
+}
+h4, .h4 {
+  font-size: em(18);
+  margin-bottom: .5em;
+  font-weight: bold;
+}
+h5, .h5 {
+  margin: 1.5em 0 .25em;
+  font-size: $base-font-size;
+  font-weight: bold;
+}
+h6, .h6 {
+  @extend h5;
+}
+
+p {
+  margin: 0 0 $base_line_height;
+}
+
+// Classes
+// -------------------------------------------------------------------
+
+.section-title {
+  padding-bottom: .5em;
+  margin-bottom: .75em; // testing
+  border-bottom: 2px solid $light-gray;
+}
+
+.page-title {
+  margin: 0 0 em(12, 56);
+  font-size: em(40);
+  line-height: 1;
+  font-weight: 300;
+
+  @include media(45em) {
+    font-size: em(56);
+  }
+}
+
+.intro {
+  margin-bottom: em(24, 20);
+  font-size: em(20);
+  line-height: 1.5;
+  color: $dark-gray;
+}
+
+
+// TESTING
+//////////////////////////////////////////////////////////////////////
+
+
+// Responsivve type
+// -------------------------------------------------------------------
+
+@include media($mobile-only) {
+  // .desc {
+  //   font-size: em(12);
+  // }
+  .site-main {
+    p,
+    li,
+    dd,dt,
+    code, pre,
+    td, th {
+      font-size: em(14);
+      line-height: 1.5;
+    }
+    blockquote p {
+      font-size: em(24);
+    }
+    .intro {
+      font-size: em(18);
+      line-height: 1.3;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////

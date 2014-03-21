@@ -1,0 +1,43 @@
+{
+  "thing" : {
+    "key" : "value"
+  },
+
+  "array" : [
+    {
+      "key" : "value"
+    },
+    {
+      "key" : "value"
+    }
+  ],
+
+  "nested_array" : [
+    {
+      "tom" : [
+        {
+          "fname" : "First",
+          "lname" : "Last",
+          "twitter" : "@twitter",
+          "url" : "http://"
+        }
+      ],
+      "dick" : [
+        {
+          "fname" : "First",
+          "lname" : "Last",
+          "twitter" : "@twitter",
+          "url" : "http://"
+        }
+      ],
+      "harry" : [
+        {
+          "fname" : "First",
+          "lname" : "Last",
+          "twitter" : "@twitter",
+          "url" : "http://"
+        }
+      ]
+    }
+  ]
+}

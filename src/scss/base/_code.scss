@@ -1,0 +1,61 @@
+// -------------------------------------------------------------------
+// Code
+// -------------------------------------------------------------------
+
+code,
+pre {
+  @include rounded-corners;
+  margin: 0 0 $base_line_height;
+  font-family: Menlo, Monaco, 'Andale Mono', 'lucida console', 'Courier New', monospace;
+  font-size: em(14);
+  line-height: 1.4;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+pre {
+  padding: .75em 1em;
+  background: $light-smoke;
+  border: 1px solid darken($light-smoke, 5);
+}
+
+/* Code blocks */
+code[class*="language-"],
+pre[class*="language-"] {
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  -moz-tab-size: 2;
+    -o-tab-size: 2;
+       tab-size: 2;
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+      -ms-hyphens: none;
+  hyphens: none;
+  border: none;
+  background: #002A35;
+}
+pre[class*="language-"] {
+  overflow: auto;
+}
+code[class*="language-"] {
+  color: white;
+}
+
+/* Inline code */
+:not(pre) > code,
+:not(pre) > code[class*="language-"] {
+  padding: 0 .5em;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: .75em;
+  line-height: 1.5;
+  background: $light-smoke;
+  border: 1px solid darken($light-smoke, 5);
+}
+
+p,li {
+  code {
+    margin-bottom: 0;
+  }
+}

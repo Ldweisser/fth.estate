@@ -1,0 +1,25 @@
+// -------------------------------------------------------------------
+// Base
+// -------------------------------------------------------------------
+
+html {
+  font-size: 100%;
+}
+
+body {
+  @include proxima_nova_regular;
+
+  font-size: $base_font_size;
+  line-height: $base_line_height;
+
+  color: $base_font_color;
+  background-color: $white;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: $brand-blue;
+  text-shadow: none;
+}
