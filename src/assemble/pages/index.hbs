@@ -1,15 +1,64 @@
 ---
-layout: post.hbs
 title: home
-pageTitle: Boilerplate
-description: A front-end tool for generating static sites with Grunt, Assemble, Bower, Sass, Bourbon, Bourbon Neat, and Bourbon Bitters.
+pageTitle: _pageTitle_
+pageDescription: _description_
 ---
 
-{{#markdown}}
-```bash
-# Congrats! You made it. Time to start building.
-#
-# Using Typekit?
-# Add typekit ID to `src/assemble/data/site.yml`
-```
-{{/markdown}}
+<div class="overview">
+  <div class="container">
+    <a href="#food" class="overview--item">
+      <img src="{{assets}}/img/food_icon.svg" alt="Food">
+      <div class="tooltip">
+        <p>We’re currently raising funds for a food truck we can take to camps and shelters. </p>
+      </div>
+    </a>
+    <a href="#kits" class="overview--item">
+      <img src="{{assets}}/img/kits_icon.svg" alt="Kits">
+      <div class="tooltip">
+        <p>Goal #1: To distribute 7,000 backpacks in a year with toiletries, first aid kits etc.</p>
+      </div>
+    </a>
+    <a href="#support" class="overview--item">
+      <img src="{{assets}}/img/support_icon.svg" alt="Support">
+      <div class="tooltip">
+        <p>Interested in volunteering time or resources? We would sure appreciate it!</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<section class="section" id="food">
+  <div class="container">
+    <h2 class="hide-text">Food</h2>
+    <img src="{{assets}}/img/food_icon.svg" alt="Food">
+    <div class="section--body">
+      <p>We’re currently raising money to buy a food truck 
+      we can take to homeless camps &amp; shelters and feed the hungry for free.
+      As of 3/15/14  We Still need: $25,000</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="kits">
+  <div class="container">
+    <h2 class="hide-text">Kits</h2>
+    <img src="{{assets}}/img/kits_icon.svg" alt="Kits">
+    <div class="section--body">
+      <p>Our Waxed canvas backpacks are filled with all the essentials from First aid kits to Cliff Bars.
+      Full list of contents Here -
+      Our Cost:$60 Each</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="support">
+  <div class="container">
+    <h2 class="hide-text">Support</h2>
+    <img src="{{assets}}/img/support_icon.svg" alt="Support">
+    <div class="section--body">
+      <p>We are a 501c3 NPO working in a local faith based community called The Rock.
+      We are raising $445,000  to provide backpacks, supplies and food to the SF Bay area’s homeless community.
+      Your support is greatly appreciated!</p>
+    </div>
+  </div>
+</section>

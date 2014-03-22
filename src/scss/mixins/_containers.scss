@@ -20,35 +20,8 @@ $container-super-narrow    : 45em; // 720px
   }
 }
 
-// Thinner containers, in case design calls for it
-
-@mixin container--text {
-  @extend .container;
-  padding-left: 7.5%;
-  padding-right: 7.5%;
-
-  @include media($max-width) {
-    padding-left: $base_line_height;
-    padding-right: $base_line_height;
-  }
-}
-
-@mixin container--narrow {
-  @extend .container;
-  max-width: $container-narrow;
-}
-@mixin container--super-narrow {
-  @extend .container;
-  max-width: $container-super-narrow;
-}
-
 // Class versions
-
 .container { @include container; }
-.container--text { @include container--text; }
-.container--narrow { @include container--narrow; }
-.container--super-narrow { @include container--super-narrow; }
-
 
 // -------------------------------------------------------------------
 // Full Bleed

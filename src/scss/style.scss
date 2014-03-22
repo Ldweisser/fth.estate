@@ -16,13 +16,10 @@
 @import "variables/variables";
 
 // Mixins
+@import "mixins/module";
 @import "mixins/padding";
 @import "mixins/containers";
-@import "mixins/module";
-@import "mixins/hide-text";
 @import "mixins/omega-reset";
-@import "mixins/list-of-links";
-@import "mixins/trailing-hovers";
 @import "mixins/rounded-corners";
 @import "mixins/buttons";
 @import "mixins/triangle";
@@ -43,11 +40,8 @@
 @import "base/tables";
 
 // Components
-// @import "components/grid-skeleton"; // uncomment you you want to use grid class names in html
+@import "components/grid-skeleton";
 @import "components/animations";
-@import "components/image-grid";
-@import "components/img-flex";
-@import "components/flashes";
 
 // Site
 @import "site/author";

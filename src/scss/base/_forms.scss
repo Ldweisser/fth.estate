@@ -11,7 +11,6 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color
 // -------------------------------------------------------------------
 
 fieldset {
-  @include module;
   margin: 0 0 $base_line_height;
   padding: $base_line_height / 1.5;
   background: $light-smoke;

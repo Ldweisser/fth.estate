@@ -4,7 +4,7 @@
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  @include proxima_nova_regular;
+  @include brandon_grotesque_regular;
   font-size: em(24);
   line-height: 1.25;
   margin: em(32, 24) 0 em(24,24);
@@ -54,36 +54,3 @@ p {
   line-height: 1.5;
   color: $dark-gray;
 }
-
-
-// TESTING
-//////////////////////////////////////////////////////////////////////
-
-
-// Responsivve type
-// -------------------------------------------------------------------
-
-@include media($mobile-only) {
-  // .desc {
-  //   font-size: em(12);
-  // }
-  .site-main {
-    p,
-    li,
-    dd,dt,
-    code, pre,
-    td, th {
-      font-size: em(14);
-      line-height: 1.5;
-    }
-    blockquote p {
-      font-size: em(24);
-    }
-    .intro {
-      font-size: em(18);
-      line-height: 1.3;
-    }
-  }
-}
-
-//////////////////////////////////////////////////////////////////////

@@ -2,40 +2,25 @@
 // Typekit Fonts
 // -------------------------------------------------------------------
 
-$proxima_nova: "proxima-nova", $helvetica;
-$proxima_nova_regular: 400;
-$proxima_nova_bold: 700;
-
-$proxima_nova_extra_condensed: "proxima-nova-extra-condensed", $helvetica;
-$proxima_nova_extra_condensed_regular: 400;
+$brandon_grotesque: "brandon-grotesque", $helvetica;
+$brandon_grotesque_regular: 400;
+$brandon_grotesque_bold: 700;
 
 // -------------------------------------------------------------------
 
-// Proxima Nova
-// ============
+// Brandon Grotesque
+// =================
 
-%proxima_nova {
-  font-family: $proxima_nova;
+%brandon_grotesque {
+  font-family: $brandon_grotesque;
 }
 
-  @mixin proxima_nova_regular {
-    @extend %proxima_nova;
-    font-weight: $proxima_nova_regular;
+  @mixin brandon_grotesque_regular {
+    @extend %brandon_grotesque;
+    font-weight: $brandon_grotesque_regular;
   }
 
-  @mixin proxima_nova_bold {
-    @extend %proxima_nova;
-    font-weight: $proxima_nova_bold;
-  }
-
-// Proxima Nova Condensed
-// ======================
-
-%proxima_nova_extra_condensed {
-  font-family: $proxima_nova_extra_condensed;
-}
-
-  @mixin proxima_nova_extra_condensed_regular {
-    @extend %proxima_nova_extra_condensed;
-    font-weight: $proxima_nova_extra_condensed_regular;
+  @mixin brandon_grotesque_bold {
+    @extend %brandon_grotesque;
+    font-weight: $brandon_grotesque_bold;
   }

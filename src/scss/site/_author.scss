@@ -2,4 +2,165 @@
 // Author
 // -------------------------------------------------------------------
 
-@import "demo";
+.hide-text {
+  position: absolute;
+  font-size: 0;
+  line-height: 0;
+  opacity: 0;
+}
+
+.site-header,
+.site-footer {
+  @include padded;
+}
+
+// site-header
+
+.site-header {
+  text-align: center;
+  background: $salmon;
+}
+
+.site-logo {
+  max-width: em(320);
+}
+.site-desc {
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 0;
+  color: $white;
+
+  @include media($mobile-only) {
+    font-size: em(18);
+  }
+}
+
+// site-main
+
+.site-main {}
+
+// overview
+
+.overview {
+  @include clearfix;
+  @include padded;
+  @include triangle(em(24), $white, 'down', 'outside');
+}
+
+.overview--item {
+  position: relative;
+  
+  @include media(35em) {
+    @include span-columns(4);
+    @include omega(3n);
+  }
+
+  &:hover {
+    .tooltip {
+      opacity: 1;
+      top: -85%;
+    }
+  }
+
+  img {
+    max-width: em(190);
+    display: block;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+}
+
+.tooltip {
+    padding: em(16) em(32);
+
+  @include media(35em) {
+    @include triangle(em(16), $primary, 'down', 'outside');
+    opacity: 0;
+    position: absolute!important;
+    top: -75%;
+    padding: em(16);
+    background: $white;
+    border-radius: em(6);
+    border: 3px solid $primary;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -ms-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+// section
+
+.section {
+  padding: {
+    top: em(60);
+    bottom: em(60);
+  }
+
+  .container {
+    @include module;
+  }
+
+  img {
+    max-width: em(380);
+    display: block;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+
+  &#food {
+    @include linear-gradient(#C8DFD7, #EAF9D7);
+  }
+  &#kits {
+    @include linear-gradient(#FCF7E3, #DFE1E0);
+  }
+  &#support {
+    @include linear-gradient(#D6D5DD, #F3E9DD);
+  }
+}
+
+.section--body {
+  max-width: $max-width / 1.5;
+  padding: em(24);
+  margin: {
+    top: em(36);
+    left: auto;
+    right: auto;
+  }
+  background: $white;
+}
+
+// site-footer
+
+.site-footer {
+  .container {
+    @include clearfix;
+    @include module;
+  }
+
+  .copyright, .badge {
+    text-align: center;
+  }
+
+  @include media($max-width) {
+
+    .copyright, .badge {
+      font-size: .9em;
+      margin: 0;
+      float: left;
+    }
+    .badge {
+      float: right;
+    }
+  }
+}
