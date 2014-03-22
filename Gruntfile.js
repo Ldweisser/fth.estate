@@ -311,7 +311,7 @@ module.exports = function(grunt) {
   grunt.registerTask('img',     ['copy:img']);
 
   // Compile tasks (prod)
-  grunt.registerTask('prod',    [/*'imagemin', */'assets', 'copy:iconfont', 'copy:templates', 'copy:templatesSave', 'useminPrepare', 'concat', 'cssmin', 'uglify', 'usemin', 'copy:templatesRev', 'assemble', 'devcode', 'clean:templates', 'copy:prodHtml', 'copy:prodAssets', 'copy:templatesPutBack', 'clean:templatesTmp', 'clean:dist']);
+  grunt.registerTask('prod',    [/*'imagemin', */'assets', 'copy:iconfont', 'copy:templates', 'copy:templatesSave', 'useminPrepare', 'concat', 'usemin', 'copy:templatesRev', 'assemble', 'devcode', 'clean:templates', 'copy:prodHtml', 'copy:prodAssets', 'copy:templatesPutBack', 'clean:templatesTmp', 'clean:dist']);
   // Plugins
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   grunt.loadNpmTasks('assemble');
