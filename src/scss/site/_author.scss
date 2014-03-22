@@ -42,7 +42,10 @@
 
 .overview {
   @include clearfix;
-  @include padded;
+  padding: {
+    top: $base_line_height * 4;
+    bottom: $base_line_height * 4;
+  }
   @include triangle(em(24), $white, 'down', 'outside');
 }
 
