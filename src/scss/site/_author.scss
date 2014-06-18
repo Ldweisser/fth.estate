@@ -51,7 +51,7 @@
 
 .overview--item {
   position: relative;
-  
+
   @include media(35em) {
     @include span-columns(4);
     @include omega(3n);
@@ -146,24 +146,29 @@
 // site-footer
 
 .site-footer {
+  text-align: center;
+
+  .social {
+    margin: 30px 0;
+
+    a {
+      transition: .3s;
+      display: inline-block;
+      width: 50px;
+      margin: 0 5px;
+
+      &:hover {
+        opacity: .5;
+      }
+
+      img {
+        display: block;
+      }
+    }
+  }
+
   .container {
     @include clearfix;
     @include module;
-  }
-
-  .copyright, .badge {
-    text-align: center;
-  }
-
-  @include media($max-width) {
-
-    .copyright, .badge {
-      font-size: .9em;
-      margin: 0;
-      float: left;
-    }
-    .badge {
-      float: right;
-    }
   }
 }
