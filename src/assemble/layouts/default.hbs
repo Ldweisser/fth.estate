@@ -5,25 +5,7 @@ layout: base.hbs
 <!DOCTYPE html>
 <html class="no-js">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
-
-  <title>{{!-- {{capitalizeEach title}} |  --}}{{site.name}}</title>
-  <meta content="{{pageDescription}}" name="description" />
-
-  <script type="text/javascript" src="//use.typekit.net/{{site.typekit}}.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-  <!-- build:css /assets/css/style.min.css -->
-  <link rel="stylesheet" href="/assets/bower/mfglabs-iconset/css/mfglabs_iconset.css" />
-  <link rel="stylesheet" href="/assets/js/libs/prism/prism.css" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <!-- endbuild -->
-
-  <!-- build:js /assets/js/modernizr.min.js -->
-  <script src="/assets/js/libs/modernizr-custom.js"></script>
-  <!-- endbuild -->
-
+  {{> head}}
 </head>
 <body {{#if bodyClass}}class="{{bodyClass}}"{{/if}}>
 
@@ -39,25 +21,11 @@ layout: base.hbs
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <p class="copyright">&copy; {{now "%Y"}} | {{site.name}}</p>
-      <p class="badge"><i class="icon-high_voltage"></i></p>
-      {{!-- ICONS: http://mfglabs.github.io/mfglabs-iconset/ --}}
+      {{> footer}}
     </div>
   </footer>
 
-  <!-- build:js /assets/js/scripts.min.js -->
-  <script src="/assets/bower/jquery/dist/jquery.js"></script>
-  <script src="/assets/bower/fastclick/lib/fastclick.js"></script>
-  <script src="/assets/js/libs/prism/prism.js"></script>
-  <script src="/assets/js/components.cat.js"></script>
-  <script src="/assets/js/init.js"></script>
-  <!-- endbuild -->
-
-  <!-- devcode: !production -->
-  <!--<script>
-    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
-  </script>-->
-  <!-- endcode -->
+  {{> scripts}}
 
 </body>
 </html>

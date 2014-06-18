@@ -11,4 +11,4 @@ window.addEventListener('load', function() {
 }, false);
 
 // Init mobileMenu + options
-$('.mobile-menu').mobileMenu();
+// $('.mobile-menu').mobileMenu();
